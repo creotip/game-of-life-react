@@ -18,5 +18,5 @@ In the project directory, run:
 
 ## Demo
 
-#### `npm run test`
+https://game-of-life-app.netlify.app/
 

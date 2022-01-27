@@ -24,10 +24,10 @@ export default function MainGrid() {
         <Box display="inline-block" overflow="hidden">
           <Button
             as="a"
-            href="https://github.com/creotip/recoil-gear"
+            href="https://github.com/creotip/game-of-life-react"
             rel="noopener noreferrer"
             target="_blank"
-            aria-label="Star creotip/recoil-gear on GitHub"
+            aria-label="Star creotip/game-of-life-react on GitHub"
             color="#24292f"
             bgColor="#ebf0f4"
             backgroundImage="linear-gradient(180deg, #f6f8fa, #ebf0f4 90%)"

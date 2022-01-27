@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ChakraProvider, Box, VStack, Grid, theme } from '@chakra-ui/react'
+import { ChakraProvider, Box, VStack, Grid, theme, Button } from '@chakra-ui/react'
 import { ColorModeSwitcher } from './ColorModeSwitcher'
 import MainGrid from './components/MainGrid'
 
@@ -14,6 +14,12 @@ export const App = () => (
           </Box>
         </VStack>
       </Grid>
+    </Box>
+    <Box textAlign="center" my={8}>
+      <Box color="gray.500">
+        ©<Box as="time">{new Date().getFullYear()}</Box>{' '}
+        <a href="https://creotip.io/">creotip.io</a>
+      </Box>
     </Box>
   </ChakraProvider>
 )

@@ -67,9 +67,9 @@ const useGame = () => {
   return {
     grid,
     isRunning,
-    setIsRunning,
     steps,
     initialize,
+    setIsRunning,
     randomize,
     handleCell,
     handleNext,

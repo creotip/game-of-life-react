@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { Box, Button, Flex, SimpleGrid, useColorMode } from '@chakra-ui/react'
 import { COLUMNS } from '../utils/constants'
 import useGame from '../hooks/useGame'

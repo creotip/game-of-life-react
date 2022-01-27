@@ -82,7 +82,7 @@ export const transformGrid = (grid: Grid): Grid => {
   let itemsToLive: any[] = []
   let newGrid: Grid = Object.assign({}, grid)
 
-  Object.keys(newGrid).forEach((column, idx) => {
+  Object.keys(newGrid).forEach(column => {
     newGrid[column].forEach((cell: any, rowIndex: any) => {
       if (cell) {
         let liveNeighbours = getLiveNeighbours(newGrid, column as any, rowIndex)
@@ -122,8 +122,8 @@ export const transformGrid = (grid: Grid): Grid => {
 export const randomizeGrid = (grid: Grid): Grid => {
   let randomGrid: Grid = {}
 
-  Object.keys(grid).forEach((item, index) => {
-    randomGrid[item] = grid[item].map(cell => Math.random() >= 0.8)
+  Object.keys(grid).forEach(item => {
+    randomGrid[item] = grid[item].map(() => Math.random() >= 0.8)
   })
   return randomGrid
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { getCellPosition, getCells, Grid, randomizeGrid, transformGrid } from '../utils'
 import { COLUMNS, INTERVAL } from '../utils/constants'
 import useInterval from 'use-interval'
@@ -20,7 +20,7 @@ const useGame = () => {
     isRunning ? INTERVAL : null
   )
 
-  const initialize = () => {
+  const initialize = useCallback(() => {
     setSteps(0)
     const cells = getCells(COLUMNS)
 
@@ -30,7 +30,7 @@ const useGame = () => {
     cells[25][15] = true
     cells[26][14] = true
     setGrid(cells)
-  }
+  }, [])
 
   const handleNext = () => {
     const nextGrid = transformGrid(grid)

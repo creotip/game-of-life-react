@@ -32,13 +32,13 @@ const useGame = () => {
     setGrid(cells)
   }, [])
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     const nextGrid = transformGrid(grid)
     setGrid(nextGrid)
     setSteps(steps + 1)
-  }
+  }, [grid, steps])
 
-  const handleCell = (column: number, rowIndex: number, cell: boolean) => {
+  const handleCell = useCallback((column: number, rowIndex: number, cell: boolean) => {
     const currentCell = !cell
 
     let newOb: any = { ...grid }
@@ -58,11 +58,11 @@ const useGame = () => {
       setLiveCellsPos(liveCellsToUpdate)
     }
     setGrid(newOb)
-  }
+  }, [grid, liveCellsPos])
 
-  const randomize = () => {
+  const randomize = useCallback(() => {
     setGrid(randomizeGrid(grid))
-  }
+  }, [grid])
 
   return {
     grid,

@@ -5,7 +5,7 @@ import useGame from '../hooks/useGame'
 
 export default function MainGrid() {
   const { colorMode } = useColorMode()
-  const { grid, isRunning, steps, initialize, setIsRunning, randomize, handleCell, handleNext } =
+  const { grid, steps, initialize, isRunning, setIsRunning, randomize, handleCell, handleNext } =
     useGame()
 
   return (
